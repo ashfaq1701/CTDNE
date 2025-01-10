@@ -179,6 +179,6 @@ class CTDNE:
             skip_gram_params['workers'] = self.workers
 
         if 'size' not in skip_gram_params:
-            skip_gram_params['size'] = self.dimensions
+            skip_gram_params['vector_size'] = self.dimensions
 
         return gensim.models.Word2Vec(self.walks, **skip_gram_params)
